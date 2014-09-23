@@ -25,7 +25,7 @@ require "fake_sns/server"
 
 # load all the actions
 action_files = File.expand_path("../fake_sns/actions/*.rb", __FILE__)
-Dir.glob(action_files).each do |file|
+Dir.glob(action_files).reverse.each do |file|
   require file
 end
 
